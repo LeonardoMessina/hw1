@@ -1,0 +1,51 @@
+table{
+	font-size: 2rem;
+    width: 50%;
+}
+
+#sidePanel{
+    width:40%;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th, td{
+    text-align: center;
+    padding: 0.4em;
+}
+
+#content>div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#message{
+    margin-top: 0.7em;
+    font-size: 1.5rem;
+}
+.error{
+    color:#a00;
+}
+
+#content>div{
+    margin-bottom: 2em;
+}
+
+@media (max-width: 768px) {
+    table{
+        font-size: 3rem;
+    }
+
+    .button{
+        font-size: 2rem;
+    }
+
+    #content>a{
+        display: inline-block;
+    }
+}

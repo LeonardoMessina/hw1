@@ -1,0 +1,40 @@
+#content{
+    text-align: center;
+    margin-right: 16rem;
+}
+
+#content>div{
+    display: inline-block;
+    border: 1px solid black;
+    padding: 1em;
+}
+
+#content h1{
+    margin-bottom: 0.2em;
+    text-align: center;
+}
+
+#contactEmail{
+    margin-top: 0.3em;
+    margin-bottom:0;
+}
+
+#content p{
+    margin: 0;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+@media (max-width: 768px) {
+    #content{
+        margin-right: 1rem;
+    }
+
+    #content h1{
+        font-size: 5rem;
+    }
+
+    #content p{
+        font-size: 3rem;
+    }
+}

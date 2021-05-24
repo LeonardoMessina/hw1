@@ -1,0 +1,311 @@
+@font-face{
+  font-family: "Raleway Regular";
+  src: url("https://www.1001fonts.com/download/font/raleway.regular.ttf");
+}
+
+html{
+  font-size: 14px;
+}
+
+body {
+  background-color: #C3B091;
+  color: black;
+  font-family: 'Montserrat', 'Raleway Regular', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+p{
+  text-align: justify;
+}
+
+a { /*Per far cambiare il cursore visto che al momento non ci sono link*/
+  cursor: pointer;
+  text-decoration: none; /*Per eliminare la sottolineatura nei link*/
+  color: #ffffff;
+  font-style: italic;
+  font-weight: 700;
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin-top: 0;
+}
+
+.hidden{
+  display: none;
+}
+
+.button{
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  border: 0;
+  background-color: rgb(179, 146, 55);
+  padding: 0.58em 0.87em;
+  border: none;
+  border-radius: 5.95em;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  z-index: 1;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: rgb(128, 124, 73);
+}
+
+.button:active {
+  cursor: pointer;
+  background-color: rgb(97, 94, 56);
+}
+
+.right{
+  text-align: right;
+}
+
+textarea:focus{
+  outline: none;
+}
+
+.modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	
+	background-color: rgba(0, 0, 0, 0.9);
+	z-index: 2;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center; 
+}
+
+.modal.hidden{
+  display: none;
+}
+
+.modal .container{
+  position: relative;
+  height: 70%;
+  width: 60%;
+  background-color: #C3B091;
+  text-align: center;
+  overflow:hidden;
+}
+
+.modal .exitButton{
+  background-image: url(../assets/esciModale.png);
+  position: absolute;
+  right: 1.3em;
+  top: 1.3em;
+  width: 2em;
+  height: 2em;
+  background-size: cover;
+  background-repeat: none;
+  z-index: 2;
+}
+
+.modal .exitButton:hover{
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.modal .exitButton:active{
+  cursor: pointer;
+  opacity: 1;
+}
+
+.modal.error .container{
+  height: auto;
+  width: auto;
+  padding: 1rem;
+}
+
+.modal.error h1{
+  color: rgb(214, 15, 15);
+  font-weight: bold;
+}
+
+.modal.error h2{
+  color: rgb(177, 19, 19);
+  margin: 0;
+}
+
+.no-scroll {
+	overflow: hidden;
+}
+
+header{
+  background-image: url(../images/SfondoUffizi.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+header h1{
+  font-family: 'Noto Sans JP', sans-serif;
+  color: rgb(214, 202, 169);
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0;
+  z-index: 1;
+}
+
+#login, #logout{
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1em;
+  background-color: #464952;
+  border: 1px solid black;
+  border-top: 0;
+  border-right: 0;
+  color: rgb(207, 169, 63);
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+#login:hover, #logout:hover {
+  background-color: rgb(126, 128, 29);
+  color:white;
+}
+
+#login:active, #logout:active {
+  background-color: rgb(96, 97, 22);
+  color:white;
+}
+
+#content{
+  margin: 1rem 1rem 1rem 16rem;
+  min-height: 70vh;
+  position: relative;
+}
+
+nav {
+  display:flex;
+  flex-direction: column;
+  justify-content: start;
+  font-family: 'Kiwi Maru', serif;
+  position: fixed;
+  top: 17vh;
+  bottom: 17vh;
+  left: 0;
+  width: 15em;
+  background-color: #363940;
+  border-top-right-radius: 1.05em;
+  border-bottom-right-radius: 1.05em;
+  z-index: 1;
+}
+
+nav a{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color:rgb(207, 169, 63);
+  padding: 0 0.5em;
+  border-bottom: 1px solid black;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav a:hover{
+  background-color: rgb(126, 128, 29);
+  color:white;
+}
+
+nav a:active{
+  background-color: rgb(96, 97, 22);
+  color:white;
+}
+
+#firstChildNav{
+  border-top-right-radius: 0.5em;
+}
+
+#lastChildNav{
+  border-bottom-right-radius: 0.5em;
+}
+
+footer {
+  background-color: #363940;
+  padding: 1rem 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+footer p{
+  font-weight: normal;
+  color: rgb(207, 169, 63);
+  text-align: center;
+  font-size: 1.2rem;
+  font-style: oblique;
+  line-height: 1.25em;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  html{
+    font-size: 6px;
+  }
+
+  .modal .container{
+    height: 93%;
+    width: 83%;
+  }
+  
+  .modal .exitButton{
+    width: 3em;
+    height: 3em;
+  }
+
+  #content{
+    margin: 1rem;
+  }
+
+  nav{
+    position: static;
+    flex-direction: row;
+    justify-content: start;
+    border-radius: 0;
+    width: 100%;
+    height: 5rem;
+  }
+
+  nav a{
+    text-align: center;
+    border-bottom: none;
+    border-right: 1px solid black;
+    padding: 0.93em 0.16em;
+    margin: 0;
+  }
+
+  #firstChildNav{
+    border-top-right-radius: 0;
+  }
+
+  #lastChildNav{
+    border-bottom-right-radius: 0;
+  }
+
+  footer p{
+    font-size: 2rem;
+  }
+
+}

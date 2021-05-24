@@ -1,0 +1,107 @@
+#content{
+    padding: 3em;
+    text-align: center;
+}
+
+#input{
+    text-align: center;
+    padding: 1em;
+}
+
+form{
+    display: inline-block;
+    border: 1px solid black;
+    border-radius: 2em;
+    display: inline-block;
+    text-align: left;
+    padding: 1.5em;
+}
+
+form>div>div{
+    padding-top: 0.5em;
+}
+
+form h1{
+    text-align: center;
+    font-weight: bold;
+}
+
+form .buttons{
+    margin-top:1.5em;
+}
+
+.errors{
+    color:#a00;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.errors h1{
+    margin-bottom: 0.2em;
+}
+
+.errors p{
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+label {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 0.1em;
+    color: rgb(37, 35, 35);
+}
+
+
+input[type=text], input[type=password]{
+    font-size: 1.3rem;
+    background-color: rgba(196, 171, 105, 0.863);
+    padding: 0.5em;
+    border:none;
+    border-radius: 0.7em;
+    width:30em;
+}
+
+input[type=submit], input[type=submit]:active{
+    font-size: 1.3rem;
+    color: rgba(112, 94, 44, 0.664);
+    background: rgba(182, 156, 86, 0.884);
+    border: 1px solid rgb(63, 59, 59);
+    border-radius: 0.7em;
+    padding: 0.6em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    color: rgba(255, 255, 255, 0.781);
+    background: rgba(105, 90, 49, 0.507);
+}
+
+input[type=text]:focus, input[type=password]:focus{
+    border: 2px solid rgba(228, 182, 55, 0.801);
+    outline-width: 0;
+}
+
+@media (max-width: 768px) {
+    form h1{
+        font-size: 4rem;
+    }
+
+    label{
+        font-size: 2rem;
+    }
+
+    input[type=text], input[type=password]{
+        font-size: 1.8rem;
+    }
+    
+    input[type=submit], input[type=submit]:active{
+        font-size: 1.8rem;
+    }
+
+    .registerTip{
+        font-size: 2.5rem;
+    }
+}

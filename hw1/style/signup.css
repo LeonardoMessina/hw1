@@ -1,0 +1,177 @@
+form div div.error{
+    visibility: hidden;
+}
+form div.showError div.error{
+    color:#a00;
+    visibility: visible;
+}
+#errors>div{
+    color:#a00;
+    padding:1.5em;
+}
+#errors>div:not(.hidden){
+    display: inline-block;
+}
+
+#errors h1{
+    margin-bottom: 0.2em;
+}
+
+#errors p{
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+#content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 1px;
+    box-shadow: 2px 5px 5px black;
+    padding: 3em;
+}
+
+label {
+    display: inline-block;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 0.1em;
+    color: rgb(37, 35, 35);
+}
+
+#input{
+    flex-grow: 0;
+}
+
+#errors{
+    flex-grow: 1;
+    position: relative;
+}
+
+#errors::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../images/Registrazione.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    opacity: 0.1;
+}
+
+form{
+    vertical-align: top;
+    border: 1px solid black;
+    border-radius: 2em;
+    display: inline-block;
+    padding: 1.5em;
+}
+
+form h1{
+    text-align: center;
+    font-weight: bold;
+}
+
+form>div>div{
+    padding-top: 0.5em;
+}
+
+form .buttons{
+    margin-top:1.5em;
+}
+
+input,select, #upload{
+    font-size: 1.3rem;
+    box-sizing: border-box;
+}
+
+input[type=text], input[type=password], input[type=date],select, #upload {
+    background-color: rgba(196, 171, 105, 0.863);
+    padding: 0.5em;
+    border:none;
+    border-radius: 0.7em;
+    width:30em;
+}
+
+input[type=submit], input[type=submit]:active{
+    color: rgba(112, 94, 44, 0.664);
+    background: rgba(182, 156, 86, 0.884);
+    border: 1px solid rgb(63, 59, 59);
+    border-radius: 0.7em;
+    padding: 0.6em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    color: rgba(255, 255, 255, 0.781);
+    background: rgba(105, 90, 49, 0.507);
+}
+
+input[type=submit]:disabled, input[type=submit]:disabled:hover, input[type=submit]:disabled:active {
+    background: #bbb;
+    color:rgb(138, 135, 135);
+    cursor: default;
+} 
+
+input[type=text]:focus, input[type=password]:focus, input[type=date]:focus,select:focus {
+    border: 2px solid rgba(228, 182, 55, 0.801);
+    outline-width: 0;
+}
+
+#upload_original {
+    display: none;
+}
+
+#upload {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#upload .file_name {
+    background: url(../assets/caricaImmagine.png) left center no-repeat;
+    background-size: contain;
+    padding-left: 1.8em;
+    padding-right: 0.2em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#upload .file_size {
+    font-size: 0.86em;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    #content{
+        flex-direction: column;
+    }
+
+    form{
+        display: block;
+    }
+
+    label,input,select, #upload{
+        font-size: 2rem;
+    }
+    input[type=text], input[type=password], input[type=date],select, #upload {
+        width:100%;
+    }
+   
+    #errors h1,#errors p{
+        font-size: 3rem;
+    }
+
+    .registerTip{
+        font-size: 2.5rem;
+    }
+}

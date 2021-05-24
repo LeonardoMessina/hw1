@@ -1,0 +1,173 @@
+#input{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-content: stretch;
+}
+#input>div{
+    flex-flow: nowrap;
+    padding: 1em;
+}
+#input input,#input select,#input textarea,#input img,#upload{
+    width:calc(43vw - 4rem);
+}
+
+form div div.error{
+    visibility: hidden;
+}
+form div.showError div.error{
+    color:#a00;
+    visibility: visible;
+    margin-bottom: 0.4em;
+}
+
+#errors>div{
+    color:#a00;
+    padding:1.5em;
+}
+#errors>div:not(.hidden){
+    display: inline;
+}
+
+#errors h1{
+    margin-bottom: 0.2em;
+}
+
+#errors p{
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+#errors{
+    flex-grow: 1;
+    position: relative;
+}
+
+#upload_original {
+    display: none;
+}
+
+#upload {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#upload .file_name {
+    background: url(../assets/caricaImmagine.png) left center no-repeat;
+    background-size: contain;
+    padding-left: 1.8em;
+    padding-right: 0.2em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#upload .file_size {
+    font-size: 0.86em;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+form{
+    width: 100%;
+    box-sizing: border-box;
+    vertical-align: top;
+    border: 1px solid black;
+    border-radius: 2em;
+    display: inline-block;
+    padding: 0.4em;
+}
+
+form h1{ /*V e V se specificare form e come*/
+    text-align: center;
+    font-weight: bold;
+}
+
+form>div>div{
+    padding-top: 0.5em;
+}
+
+form .buttons .right{
+    float: right;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 0.1em;
+    color: rgb(37, 35, 35);
+}
+
+label[for=upload_original]{
+    margin-top: 0.4em;
+}
+
+input[type=text], input[type=password], input[type=date],select,textarea,#upload {
+    font-size: 1.3rem;
+    background-color: rgba(196, 171, 105, 0.863);
+    padding: 0.5em;
+    border:none;
+    border-radius: 0.7em;
+}
+
+.button,.button:active{
+    font-size: 1.8rem;
+    color: rgba(112, 94, 44, 0.664);
+    background: rgba(182, 156, 86, 0.884);
+    border: 1px solid rgb(63, 59, 59);
+    border-radius: 0.7em;
+    padding: 0.6em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    margin-bottom: 0.4em;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+    display: inline-block;
+}
+
+.button:hover {
+    color: rgba(255, 255, 255, 0.781);
+    background: rgba(105, 90, 49, 0.507);
+}
+
+.button:disabled,.buttan:disabled:active {
+    background: #bbb;
+    color:rgb(138, 135, 135);
+    cursor: default;
+} 
+
+input[type=text]:focus, input[type=password]:focus, input[type=date]:focus,select:focus {
+    border: 2px solid rgba(228, 182, 55, 0.801);
+    outline-width: 0;
+}
+
+textarea{
+    height: 8em;
+}
+
+@media (max-width: 768px) {
+    #input>div{
+        flex-grow: initial;
+    }
+    #input input,#input select,#input textarea,#input img,#upload{
+        width:43vw;
+    }
+
+    label{
+        font-size: 2rem;
+    }
+
+    input[type=text], input[type=password], input[type=date],select,textarea,#upload{
+        font-size: 1.6rem;
+    }
+
+    #upload .file_name{
+        font-size: 2.1rem;
+    }
+}

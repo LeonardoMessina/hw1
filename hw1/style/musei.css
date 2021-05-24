@@ -1,0 +1,266 @@
+body{
+    min-height: 100vh; /*Una delle modifiche fatte per far sì che quando la ricerca non produce risultati, il footer rimanga in basso*/
+}
+
+#mapModal img{
+    height: calc(100% - 11.0rem);
+    width: calc(100% - 4rem);
+    object-fit: contain;
+    margin: 1rem 0;
+    position: relative;
+}
+
+#mapModal h1{
+    position: absolute;
+    top:5rem;
+    left:0;
+    right: 0;
+    z-index: 0;
+    font-size: 1.5rem;
+}
+
+  
+#mapModal p{
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    text-align: justify;
+    margin: 0 2rem;
+    overflow-y: auto;
+    height: 8rem;
+    white-space: pre-line;
+    padding-right: 1rem;
+}
+
+header{
+    height:5rem; /*Imposto l'altezza dell'header per poterla inserire nel calcolo dell'altezza minima del #content*/
+}
+
+#content{
+    margin-right: 0;
+    min-height: calc(100vh - 5rem - 5rem - 2rem); /*100vh è tutta l'altezza della viewport, 5rem è l'altezza dell'header, 5rem è l'altezza del footer compreso il padding, 2rem (1+1) sono i margini top e bottom del #content*/
+}
+
+#content h1{
+    margin-bottom: 1rem; /*Lo stesso del margin-top del #content*/
+}
+
+#favourites>h1, #museumsList>h1{
+    font-size: 2.5rem;
+}
+
+.museumsContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+section{
+    width: 24em;
+    padding: 1em;
+    border: 0.2em solid black;
+    border-radius: 1em;
+    margin-bottom: 1em;
+    margin-right: 1rem;
+    background-color: rgba(255, 235, 205, 0.486);
+    text-align: center;
+    position: relative;
+}
+
+section h1{
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+    margin-right: 4.3rem;
+    text-align: left;
+}
+
+section h2{
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+    text-align: left;
+}
+
+section>img{
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    
+}
+
+section p{
+    font-size: 1rem;
+    text-align: justify;
+    margin: 0;
+}
+
+section .favouriteButton{
+    position: absolute;
+    right: 1.3em;
+    top: 1.3em;
+    width: 2em;
+    height:2em;
+    background-size: cover;
+    background-repeat: none;
+}
+
+section .favouriteButton:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+section .favouriteButton:active{
+    cursor: pointer;
+    opacity: 1;
+}
+
+section.favourite .favouriteButton{
+    background-image: url(../assets/rimuoviPreferiti.png);
+}
+
+section.notFavourite .favouriteButton{
+    background-image: url(../assets/aggiungiPreferiti.png);
+}
+
+section .map{
+    float: right;
+    width: 3rem;
+    height:3rem;
+    background-size: cover;
+    background-repeat: none;
+    z-index: 2;
+    background-image: url(../assets/mappa.png);
+}
+
+section .map:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+section .map:active{
+    cursor: pointer;
+    opacity: 1;
+}
+
+section .meteo{
+    position: relative;
+    text-align: left;
+    margin-bottom: 1em;
+}
+
+section .meteo h2{
+    display: inline;
+}
+section .meteo img{
+    vertical-align: top;
+    height: 2.5em;
+    margin-top: -0.5em;
+    margin-left: 0.3em;
+}
+
+section a{
+    background-color:burlywood;
+    border: 1.5px solid black;
+    font-size: 1.2rem;
+    color:black;
+    padding:0.2em;
+    font-style: normal;
+}
+
+section .moreInfoButton{
+    cursor: pointer;
+}
+section .moreInfoButton:hover{
+    opacity: 0.8;
+}
+section .moreInfoButton:active{
+    opacity: 1;
+}
+
+#museumsList{
+    position: relative;
+}
+
+#museumsList input{
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    outline: none;
+    background-color: cornsilk;
+    font-size: 2.5rem; /*Lo stesso di #museumsList>h1 */
+}
+
+footer{
+    height: 3rem;
+}
+
+@media (max-width: 768px) {
+    #mapModal img{
+        height: calc(100% - 22rem);
+        width: calc(100% - 1rem);
+    }
+    
+    #mapModal h1{
+        display: none;
+    }
+
+    #mapModal p{
+        font-size: 2.5rem;
+        height: 15rem;
+        padding-right: 2rem;
+    }
+
+    header{
+        height: 7rem;
+    }
+
+    #content{
+        min-height: calc(100vh - 7rem - 6.8rem - 2rem - 5rem); /*Tolgo anche 5rem perchè nel mobile la nav è sopra*/
+    }
+
+    section h1{
+        font-size: 3rem;
+    }
+
+    section h2{
+        font-size: 2.5rem;
+    }
+    
+    section p{
+    font-size: 2.5rem;
+    }
+
+    section a{
+        background-color:burlywood;
+        border: 1.5px solid black;
+        font-size: 2.5rem;
+    }
+
+    section .meteo img{
+        margin-top: 0;
+    }
+
+
+    section .map{
+        width: 4rem;
+        height:4rem;
+    }
+
+    footer{
+        height: 4.8rem;
+    }
+
+    .museumsContainer{
+        display: block;
+    }
+    .museumsContainer section{
+        display: block;
+        width: initial;
+    }
+    .meteo{
+        margin-bottom: 0.5em;
+    }
+    section .meteo img{
+        height: 4.5em;
+        margin-top: -1em;
+    }
+}
