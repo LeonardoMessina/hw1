@@ -19,7 +19,7 @@ p{
   text-align: justify;
 }
 
-a { /*Per far cambiare il cursore visto che al momento non ci sono link*/
+a {
   cursor: pointer;
   text-decoration: none; /*Per eliminare la sottolineatura nei link*/
   color: #ffffff;
